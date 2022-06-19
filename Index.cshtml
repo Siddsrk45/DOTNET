@@ -1,0 +1,94 @@
+﻿@model ModelPractice.Models.Employee
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width = device-width"/>
+    <title>Index</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Id</td>
+            <td>@Model.Id</td>
+        </tr>
+        <tr>
+            <td>
+                Name
+            </td>
+            <td>
+                @Model.Name
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Address
+            </td>
+            <td>
+                @Model.Address
+                @DateTime.Now
+
+            </td>
+        </tr>
+    </table>
+    @*@{
+        var a = 2;
+        var b = 4;
+        var c = 7;
+        var colorlist = new List<string>() { "red", "green", "yellow" };
+    }*@
+<div>
+    @*@(a + b + c)
+    @{ 
+        foreach(string items in colorlist)
+        {
+            @items;
+        }
+        }*@
+
+    @{ 
+        bool a = true;
+        int b = 5;
+        int c = 6;
+    }
+
+    @if (a)
+    {
+        <h1>hello </h1>
+    }
+   
+<h1>  @(b > c ? "b is greater" : "c is greater"); </h1>
+    
+   
+    @for (int i = 0; i < 10; i++)
+    {
+        <h1>hello i am from @i</h1>
+    }
+        
+    @{ 
+        var list = new List<int>()
+        {
+            1,2,3,4,5
+        };
+    } 
+
+    @foreach (var item in list)
+    {
+       <h1> @item</h1>
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</body>
+</html>
